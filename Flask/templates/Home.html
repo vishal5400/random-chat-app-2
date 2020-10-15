@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/global.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script> 
+            $(document).ready(function(){ 
+            $('#btn1').click(function() {      
+            var btn = $(this);      
+            btn.prop('disabled', true);     
+            setTimeout(function() {         
+            btn.prop('disabled', false);     
+            },150000);   // enable after 150 seconds 
+            }); 
+            }); </script>
+
+    </head>
+    <body>
+        <section class="container-fluid bg">
+            <section class="row justify-content-center">
+                
+                    <form method ="POST GET" action="/call">
+                        <div class="form-group">
+                            <h1>Welcome</h1>
+                            <br>                           
+                            <a href="/call"><button class="btn btn-primary btn-block" id="btn1" >Start</button></a>
+                        </div>
+                    </form>  
+                    
+                    <div class="footer">
+                        <a class="font-weight-bold" href="/logout">Logout</a>
+                      </div>
+                
+            </section>    
+        </section>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
+
+   
