@@ -12,8 +12,11 @@
                 <div class="form-group">
                     <h1>Not online any one</h1>
                     <br>
-                    <a href="/call"><button class="btn btn-primary btn-block" id="btn1" >Retry</button></a>
+                    <div id="loading" style="display:none;"><img src="../static/image/loader1.gif" alt="Loading" /></div>
+                    <br>
+                    <a href="/btn"><button class="btn btn-primary btn-block" onclick="$('#loading').show();" id="btn1" >Retry</button></a>
                 </div>
+                <div class="footer"><a class="btn-danger btn-lg  btn-block" href="/end">End</a></div>
             </section>    
         </section>
 
