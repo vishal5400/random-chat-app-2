@@ -21,11 +21,13 @@
         <section class="container-fluid bg">
             <section class="row justify-content-center">
                 
-                    <form method ="POST GET" action="/call">
+                    <form method ="POST GET" action="/btn">
                         <div class="form-group">
                             <h1>Welcome</h1>
-                            <br>                           
-                            <a href="/call"><button class="btn btn-primary btn-block" id="btn1" >Start</button></a>
+                            <br> 
+                            <div id="loading" style="display:none;"><img src="../static/image/loader1.gif" alt="Loading" /></div>
+                            <br>                          
+                            <a href="/btn"><button onclick="$('#loading').show();" class="btn btn-primary btn-block" id="btn1" >Start</button></a>
                         </div>
                     </form>  
                     
