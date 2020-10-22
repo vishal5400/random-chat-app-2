@@ -95,13 +95,13 @@ def vv():
         nm = final[0][1]
         cursor.execute("DELETE FROM gp WHERE name='{}' LIMIT 1".format(final[0][1]))
         conn.commit()
-        return redirect ("https://meet.jit.si/"+nm)
+        return render_template ("Call.html", nm=nm)
     else:
         time.sleep(5)
         if len(final)>0:
             cursor.execute("DELETE FROM gp WHERE name='{}' LIMIT 1".format(final[0][1]))
             conn.commit()
-            return redirect ("https://meet.jit.si/"+nm)
+            return render_template ("Call.html", nm=nm)
         else:
             no = session['user_id']
             sp1 = no.split("@")[0]
@@ -120,13 +120,13 @@ def chat():
         users1 = cursor.fetchall()
         a = users1[0][0]
         b = users1[1][0]
-        var = a+b
-        cursor.execute("INSERT INTO gp(name) VALUES('{}')".format(var))
+        nm = a+b
+        cursor.execute("INSERT INTO gp(name) VALUES('{}')".format(nm))
         cursor.execute("DELETE FROM list WHERE name='{}' LIMIT 1".format(a))
         cursor.execute("DELETE FROM list WHERE name='{}' LIMIT 1".format(b))
         conn.commit()
         time.sleep(10)
-        return redirect ("https://meet.jit.si/"+var)
+        return render_template ("Call.html", nm=nm)
     else:
         return redirect ('/vv')
 #Call ended function
