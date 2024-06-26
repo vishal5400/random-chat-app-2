@@ -4,7 +4,7 @@ import os
 import time
 
 #This code for mysql database connection
-conn = mysql.connector.connect(host="localhost", user="vishal", password="Vkd123@@", database="app")
+conn = mysql.connector.connect(host="localhost", user="user", password="password", database="app")
 cursor = conn.cursor()
 
 #Flask code
