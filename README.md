@@ -14,7 +14,7 @@ This is my first project using Python, Flask, MySQL, HTML, CSS, JS, and Jitsi. T
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/vishalkaushikdixit/random-chat-app.git
+   git clone https://github.com/vishal5400/random-chat-app.git
    cd random-chat-app/Flask
    pip install -r requirements.txt
    python3 main.py
